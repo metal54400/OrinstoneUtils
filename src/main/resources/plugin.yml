@@ -1,0 +1,47 @@
+name: OrinstoneUtils
+version: '${version}'
+main: fr.orinstone.OrinstoneUtils
+api-version: '1.21'
+author: Orinstone
+description: Marque automatiquement les items récupérés en créatif par le staff.
+commands:
+
+  tpa:
+    description: ᴇɴᴠᴏʏᴇʀ ᴜɴᴇ ᴅᴇᴍᴀɴᴅᴇ ᴅᴇ ᴛᴇʟᴇᴘᴏʀᴛᴀᴛɪᴏɴ
+    usage: /tpa <joueur>
+    
+  tpaccept:
+    description: ᴀᴄᴄᴇᴘᴛᴇʀ ᴜɴᴇ ᴅᴇᴍᴀɴᴅᴇ
+    usage: /tpaccept [joueur]
+    aliases: [ tpyes ]
+    
+  tpdeny:
+    description: ʀᴇꜰᴜꜱᴇʀ ᴜɴᴇ ᴅᴇᴍᴀɴᴅᴇ
+    usage: /tpdeny [joueur]
+    aliases: [ tpno, tpcancel ]
+    
+  tpahere:
+    description: ᴅᴇᴍᴀɴᴅᴇʀ ᴀ ᴜɴ ᴊᴏᴜᴇᴜʀ ᴅᴇ ᴠᴇɴɪʀ
+    usage: /tpahere <joueur>
+    
+  setspawn:
+    description: Définit le point de spawn du serveur.
+    permission: orinstoneutils.admin
+    
+  spawn:
+    description: Se téléporter au spawn.
+
+permissions:
+  orinstoneutils.tpa:
+    default: true
+    
+  orinstoneutils.tpahere:
+    default: true
+    
+  orinstoneutils.modo:
+    description: Donne le statut "modo" pour le marquage des items créatifs.
+    default: op
+    
+  orinstoneutils.admin:
+    description: Donne le statut "modo" pour le marquage des items créatifs.
+    default: op

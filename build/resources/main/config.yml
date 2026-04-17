@@ -1,0 +1,50 @@
+tpa:
+  timeout: 60           # secondes avant expiration
+  cooldown: 30          # secondes entre deux demandes
+  warmup: 3             # compte a rebours avant TP (0 = instantane)
+  cancel-on-move: true  # annuler si le joueur bouge
+  max-requests: 5       # demandes en attente max
+
+protection:
+  enabled: true
+  max-connections-per-ip: 3
+  auto-ban-bots: true
+  anti-crash: true
+  anti-spam:
+    enabled: true
+    max-packets-per-second: 100
+    action: KICK        # KICK | BAN | MUTE
+  rate-limit:
+    chat: 3             # messages/seconde max
+    commands: 5         # commandes/seconde max
+  blacklisted-names:
+    - "bot"
+    - "hack"
+    - "exploit"
+
+messages:
+  prefix: "&8[&bOrinstone&8] &r"
+
+  # TPA
+  tpa-sent:       "&7ᴅᴇᴍᴀɴᴅᴇ ᴇɴᴠᴏʏᴇᴇ ᴀ &e{target}&7."
+  tpa-received:   "&e{sender} &7ᴠᴇᴜᴛ ꜱᴇ ᴛᴇʟᴇᴘᴏʀᴛᴇʀ ᴀ ᴠᴏᴜꜱ."
+  tpahere-received: "&e{sender} &7ᴠᴏᴜꜱ ᴅᴇᴍᴀɴᴅᴇ ᴅᴇ ʟᴇ ʀᴇᴊᴏɪɴᴅʀᴇ."
+  tpa-accepted:   "&7ᴅᴇᴍᴀɴᴅᴇ ᴀᴄᴄᴇᴘᴛᴇᴇ ᴘᴀʀ &e{target}&7."
+  tpa-denied:     "&7ᴅᴇᴍᴀɴᴅᴇ ʀᴇꜰᴜꜱᴇᴇ ᴘᴀʀ &e{target}&7."
+  tpa-expired:    "&7ʟᴀ ᴅᴇᴍᴀɴᴅᴇ ᴠᴇʀꜱ &e{target} &7ᴀ ᴇxᴘɪʀᴇ."
+  tpa-cancelled:  "&7ᴅᴇᴍᴀɴᴅᴇ ᴀɴɴᴜʟᴇᴇ."
+  tpa-warmup:     "&7ᴛᴇʟᴇᴘᴏʀᴛᴀᴛɪᴏɴ ᴅᴀɴꜱ &e{seconds}ꜱ&7. ɴᴇ ʙᴏᴜɢᴇᴢ ᴘᴀꜱ !"
+  tpa-teleporting: "&7ᴛᴇʟᴇᴘᴏʀᴛᴀᴛɪᴏɴ ᴇɴ ᴄᴏᴜʀꜱ..."
+  tpa-moved:      "&cᴛᴇʟᴇᴘᴏʀᴛᴀᴛɪᴏɴ ᴀɴɴᴜʟᴇᴇ &7— ᴠᴏᴜꜱ ᴀᴠᴇᴢ ʙᴏᴜɢᴇ."
+  no-request:     "&7ᴀᴜᴄᴜɴᴇ ᴅᴇᴍᴀɴᴅᴇ ᴇɴ ᴀᴛᴛᴇɴᴛᴇ."
+  no-player:      "&7ᴊᴏᴜᴇᴜʀ ɪɴᴛʀᴏᴜᴠᴀʙʟᴇ."
+  cooldown:       "&7ᴀᴛᴛᴇɴᴅᴇᴢ &e{seconds}ꜱ &7ᴀᴠᴀɴᴛ ᴜɴᴇ ɴᴏᴜᴠᴇʟʟᴇ ᴅᴇᴍᴀɴᴅᴇ."
+  self-request:   "&7ᴠᴏᴜꜱ ɴᴇ ᴘᴏᴜᴠᴇᴢ ᴘᴀꜱ ᴠᴏᴜꜱ ᴛᴇʟᴇᴘᴏʀᴛᴇʀ ᴀ ᴠᴏᴜꜱ-ᴍᴇᴍᴇ."
+  no-permission:  "&7ᴠᴏᴜꜱ ɴ'ᴀᴠᴇᴢ ᴘᴀꜱ ʟᴀ ᴘᴇʀᴍɪꜱꜱɪᴏɴ."
+  player-only:    "&7ᴄᴇᴛᴛᴇ ᴄᴏᴍᴍᴀɴᴅᴇ ᴇꜱᴛ ʀᴇꜱᴇʀᴠᴇᴇ ᴀᴜx ᴊᴏᴜᴇᴜʀꜱ."
+
+  # Protection
+  kick-bot:       "&8[&bOrinstone&8]\n\n&7ᴄᴏɴɴᴇxɪᴏɴ ʀᴇᴊᴇᴛᴇᴇ.\n&8ꜱᴜꜱᴘᴇᴄᴛᴇ ᴅ'ᴇᴛʀᴇ ᴜɴ ʙᴏᴛ."
+  kick-spam:      "&8[&bOrinstone&8]\n\n&7ᴇxᴘᴜʟꜱɪᴏɴ ᴘᴏᴜʀ ꜱᴘᴀᴍ."
+  kick-crash:     "&8[&bOrinstone&8]\n\n&7ᴘᴀQᴜᴇᴛ ᴅᴀɴɢᴇʀᴇᴜx ᴅᴇᴛᴇᴄᴛᴇ."
+  kick-ip-limit:  "&8[&bOrinstone&8]\n\n&7ᴛʀᴏᴘ ᴅᴇ ᴄᴏɴɴᴇxɪᴏɴꜱ ᴅᴇᴘᴜɪꜱ ᴄᴇᴛᴛᴇ ᴀᴅʀᴇꜱꜱᴇ."
